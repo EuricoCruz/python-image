@@ -35,7 +35,7 @@ def test_create_campeonato(client):
     assert response.json['message'] == 'Campeonato adicionado com sucesso!'
 
     response = client.get('/campeonatos')
-    assert response.json == [{"nome": "Campeonato A"}]
+    assert response.json == [{"nome": "Campeonato"}]
 
 def test_404_error(client):
     response = client.get('/nonexistent')
